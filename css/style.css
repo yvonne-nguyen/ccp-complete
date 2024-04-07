@@ -1,0 +1,371 @@
+body{
+    background-color: #FEF5EC;
+    color: #3e3c3c;
+    font-family: 'Raleway', sans-serif;
+    padding: 4%;
+    line-height: 190%;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .topnav #myTopnav {
+    display: none;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color: #3e3c3c;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #b9b9b9;
+    color: black;
+    border-radius: 30px;
+  }
+
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #506954;
+    color: #FEF5EC;
+    border-radius: 30px;
+    text-decoration: underline;
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: hidden;
+  }
+
+/* Styling for active links. */
+.active {
+    font-weight: 900;
+    text-decoration-line: underline;
+    text-decoration: #000;
+    text-decoration-thickness: 16%;
+}
+
+a{
+    color: #3e3c3c;
+    text-decoration: none;
+}
+
+p a{
+    color: #506954;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+h1{
+    text-align: left;
+    padding-bottom: 5%;
+    line-height: 130%;
+    font-weight: 900;
+    font-size: 1.9em;
+}
+
+h2{
+    text-align: left;
+    padding-bottom: 3%;
+    font-weight:600;
+    font-size: 1.6em;
+}
+
+h3{
+    text-align: left;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    font-weight:600;
+    font-size: 1.4em;
+}
+
+h4{
+    text-align: left;
+    padding-bottom: 1%;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+}
+
+/* Styling for recipe steps section. */
+.steps{
+    list-style-position: inside;
+    padding-left: 0%;
+}
+/* Styling for recipe steps list. */
+.steps li{
+    padding-bottom: 5%;
+    list-style-type: numeric;
+}
+
+/* Styling for recipe grid. */
+.recipe-grid {
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+    padding-bottom: 15%;
+    width: 100%;
+}
+
+/* Styling for recipe card. */
+.recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    padding: 4%;
+}
+
+/* Styling for recipe card iamge. */
+.recipe-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Styling for recipe image. */
+.recipe-desc li {
+    margin-bottom: 5px;
+    align-self: start;
+}
+
+/* Rounded image corners */
+.recipe-desc img, .travel-grid img, .pets-grid img{
+    border-radius: 10px;
+}
+
+.pets-grid, .travel-grid, .card-container, .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    padding-bottom: 10%;
+}
+
+/* Styling for images in grid. */
+.pets-grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for pets images, ensuring consistency. */
+.pets-grid-item img, .travel-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Cards containers for the home page. */
+.card-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Home page card styling. */
+.card {
+    padding: 6%;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Styling for home page card images. */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Color for card hover state. */
+.card:hover {
+    background-color: #e0e0e0;
+}
+
+/* Skip to main. */
+.skip-to-main {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+/* Skip to main focus state. */
+.skip-to-main:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* Styling for check boxes on recipie page. */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #ffffff;
+    border: #000 solid 1px;
+    border-radius: 3px;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #506954;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 5.5px;
+    top: 0.5px;
+    width: 4px;
+    height: 10px;
+    border: solid #FEF5EC;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+@media screen and (min-width: 768px) {
+
+    .topnav, .topnav #myTopnav, .topnav a, nav {
+        display: initial;
+        line-height: 5;
+    }
+
+    .fa.fa-bars {
+        display: none;
+    }
+
+    nav:active{
+        font-weight: 900;
+    }
+
+    .recipe-grid, .pets-grid, .travel-grid, .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .recipe-desc {
+        display: initial;
+        grid-template-columns: initial;
+        grid-auto-flow: initial;
+        width: initial;
+        padding-bottom: initial;
+    }
+
+    .steps li{
+        padding-bottom: 5%;
+    }
+
+    .nav-item li {
+        padding-top: 4%;
+    }
+
+    .recipe-desc {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        width: 100%;
+        padding-bottom: 2%;
+        align-items: start;
+    }
+    .pets-grid, .travel-grid, .card-container, .recipe-grid {
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .recipe-desc {
+        display: initial;
+        grid-template-columns: initial;
+        grid-auto-flow: initial;
+        width: initial;
+        padding-bottom: initial;
+    }
+
+    .steps li{
+        padding-bottom: 3.5%
+    }
+
+    .pets-grid, .travel-grid, .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recipe-desc {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        width: 100%;
+        padding-bottom: 2%;
+        align-items: start;
+    }
+
+    .recipe-card{
+        padding: 3%;
+    }
+
+    .travel-grid img{
+        width: 500px;
+    }
+}
